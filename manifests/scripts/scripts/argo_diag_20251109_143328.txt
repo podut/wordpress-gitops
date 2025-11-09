@@ -1,0 +1,10 @@
++ kubectl apply -n argocd -k /d/Volume-doker/wordpress-gitops/manifests/argocd
+application.argoproj.io/stack-vault created
+[14:33:29] [3/3] Applications în 'argocd':
++ kubectl -n argocd get applications -o custom-columns=NAME:.metadata.name,SYNC:.status.sync.status,HEALTH:.status.health.status
+NAME          SYNC     HEALTH
+stack-vault   <none>   <none>
+
+UI ArgoCD: https://localhost:8080 (dacă faci port-forward)
+Port-forward: kubectl -n argocd port-forward svc/argocd-server 8080:443
+Parola inițială: kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d

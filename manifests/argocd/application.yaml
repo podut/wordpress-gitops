@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-user/wordpress-gitops.git
+    repoURL: https://github.com/podut/wordpress-gitops.git
     targetRevision: HEAD
-    path: manifests
+    path: manifests/base
   destination:
     server: https://kubernetes.default.svc
     namespace: stack-services

@@ -1,0 +1,21 @@
+{
+  "kv/stack/mariadb": {
+    "MARIADB_ROOT_PASSWORD": "changeme-root",
+    "MARIADB_DATABASE": "appdb",
+    "MARIADB_USER": "app_user",
+    "MARIADB_PASSWORD": "changeme-app"
+  },
+  "kv/stack/redis": {
+    "REDIS_PASSWORD": "changeme-redis"
+  },
+  "kv/stack/wordpress": {
+    "WORDPRESS_DB_HOST": "mariadb.stack-services.svc.cluster.local:3306",
+    "WORDPRESS_DB_USER": "app_user",
+    "WORDPRESS_DB_PASSWORD": "changeme-app",
+    "WORDPRESS_DB_NAME": "appdb"
+  },
+  "kv/stack/app": {
+    "JWT_SECRET": "dev-jwt-secret",
+    "COOKIE_SECRET": "dev-cookie-secret"
+  }
+}
